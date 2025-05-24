@@ -1,3 +1,55 @@
+# 🎨 도형 ASCIIShapes: C++ OOP & Polymorphism Demo 🇵🇱
+_A C++ console program demonstrating object-oriented programming (OOP) principles like abstract classes and polymorphism by drawing various shapes (Circle, Square, Triangle) using ASCII art, with Polish locale support._
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![C++](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)](https://isocpp.org/)
+[![Platform: Cross-platform](https://img.shields.io/badge/Platform-Cross--platform-lightgrey.svg)]()
+
+## 📋 Table of Contents
+1.  [Overview](#-overview)
+2.  [Key OOP Concepts & Features](#-key-oop-concepts--features)
+3.  [Screenshots (Conceptual Output)](#-screenshots-conceptual-output)
+4.  [System Requirements](#-system-requirements)
+5.  [Installation and Setup](#️-installation-and-setup)
+6.  [Usage Guide](#️-usage-guide)
+7.  [File Structure](#-file-structure)
+8.  [Technical Notes](#-technical-notes)
+9.  [Contributing](#-contributing)
+10. [License](#-license)
+11. [Contact](#-contact)
+
+## 📄 Overview
+
+**ASCIIShapes OOP Demo**, developed by Adrian Lesniak, is a C++ console application designed to showcase fundamental object-oriented programming (OOP) concepts, particularly **abstraction** and **polymorphism**. It defines an abstract base class `Figura` (Shape) with a pure virtual `rysuj()` (draw) method. Concrete derived classes `Kolo` (Circle), `Kwadrat` (Square), and `Trojkat` (Triangle) override this method to print their respective simple ASCII art representations to the console. The program also demonstrates setting a Polish locale (`pl_PL.UTF-8`) to ensure correct display of Polish characters in its output messages.
+
+## ✨ Key OOP Concepts & Features
+
+*   🏛️ **Abstract Base Class (`Figura`)**:
+    *   Defines a common interface for all shapes.
+    *   Contains a **pure virtual function** `virtual void rysuj() const = 0;`, making `Figura` an abstract class that cannot be instantiated directly.
+    *   Includes a virtual destructor `virtual ~Figura() {}` for proper cleanup when dealing with derived objects through base class pointers.
+*   🔶⚪⬜ **Derived Concrete Classes**:
+    *   **`Kolo` (Circle)**: Inherits from `Figura` and overrides `rysuj()` to print a circle representation (e.g., `()`).
+    *   **`Kwadrat` (Square)**: Inherits from `Figura` and overrides `rysuj()` to print a square representation (e.g., `[]`).
+    *   **`Trojkat` (Triangle)**: Inherits from `Figura` and overrides `rysuj()` to print a triangle representation (e.g., `/\\`).
+*   🔄 **Polymorphism in Action**:
+    *   Objects of derived classes (`Kolo`, `Kwadrat`, `Trojkat`) are dynamically allocated and stored as `Figura*` (pointers to the base class).
+    *   The correct `rysuj()` method for each specific shape is called at runtime due to virtual function dispatch, demonstrating polymorphism.
+*   🇵🇱 **Localization (Polish Language Support)**:
+    *   `setPolishLocale()`: A function that attempts to set the global C++ locale to `pl_PL.UTF-8` using `std::locale::global(std::locale("pl_PL.UTF-8"));`. This allows the program to correctly display Polish diacritics (e.g., "ł" in "koło", "ą" in "trójkąt") in its console output, provided the system and terminal support this locale and encoding.
+*   🧠 **Dynamic Memory Management**:
+    *   Shape objects are created on the heap using `new`.
+    *   Memory is explicitly deallocated using `delete` to prevent memory leaks.
+
+## 🖼️ Screenshots (Conceptual Output)
+
+The program does not have an interactive UI but produces direct console output.
+
+**Expected Console Output:**
+*To jest koło: ()*
+*To jest kwadrat: []*
+*To jest trójkąt: /\*
+
 *(The exact Polish phrases like "To jest koło" might vary based on implementation but demonstrate the locale setting.)*
 
 ## ⚙️ System Requirements
