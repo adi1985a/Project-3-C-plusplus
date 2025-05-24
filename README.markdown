@@ -46,9 +46,9 @@ _A C++ console program demonstrating object-oriented programming (OOP) principle
 The program does not have an interactive UI but produces direct console output.
 
 **Expected Console Output:**
-*To jest koło: ()*
-*To jest kwadrat: []*
-*To jest trójkąt: /\*
+*To jest koło: ()
+To jest kwadrat: []
+To jest trójkąt: /\*
 
 *(The exact Polish phrases like "To jest koło" might vary based on implementation but demonstrate the locale setting.)*
 
